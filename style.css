@@ -1,0 +1,83 @@
+body{
+    margin-right: 20%;
+    margin-left: 20%;
+
+    background-image: url(imgs/img-fundo.jpg);
+    background-position: left-bottom;
+
+    font-family: "Lucida Console", monospace
+    ;
+    font-size: 18px;
+}
+html, body{
+    min-height: 100%;
+}
+
+h1{
+    font-family: "Times New Roman", serif;
+    text-align: center;
+}
+h2{
+    font-family: "Times New Roman", serif;
+    color: darkred;
+}
+p{
+    text-align: justify;
+}
+
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+thead{
+    background-color: aqua;
+    font-size: large;
+}
+tbody{
+    background-color: azure;
+    font-size: medium;
+}
+th{
+    border: 1px solid black;
+    padding: 5px;
+}
+td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.imagem-direita, .imagem-esquerda{
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid black;
+}
+.imagem-direita{
+    float: right;
+    margin-left: 10px;
+}
+.imagem-esquerda{
+    float: left;
+    margin-right: 10px;
+}
+.cortina{
+    background-color: rgba(240, 255, 255, 0.9);
+    border: 2px dotted black;
+    padding: 25px;
+}
+.bloco{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.paragrafo-externo{   
+    background-color: rgba(240, 255, 255, 0.7);
+    border: 2px dotted black;
+    padding: 2px;
+    text-align: right;
+}
+
+#imagem-redonda{
+    border-radius: 50%;
+}
