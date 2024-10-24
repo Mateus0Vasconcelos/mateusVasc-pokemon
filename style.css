@@ -17,12 +17,14 @@ body {
 
 .menu-principal {
     background-color: #DBDBDB;
-    width: 200px;
+    width: 500px;
 
     position: absolute;
     top: 0;
-    left: -205px;
+    left: -505px;
     bottom: 0;
+
+    z-index: 2;
 
     transition: left 100ms ease-out;
 }
@@ -35,6 +37,8 @@ body {
 
     margin: 10px;
 
+    bottom: 10px;
+
     border: 2px solid black;
     border-radius: 10%;
 
@@ -42,6 +46,8 @@ body {
 
     font-size: 1.5em;
     font-weight: 400;
+
+    z-index: 2;
 
     transition: all 50ms linear;
 }
@@ -55,6 +61,6 @@ body.menu-visivel > .menu-principal {
     left: 0;
 }
 
-body.menu-visivel > .container {
-    left: 200px;
+body.menu-visivel > #alterna-menu {
+    left: 510px;
 }
