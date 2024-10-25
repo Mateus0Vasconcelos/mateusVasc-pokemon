@@ -20,8 +20,8 @@ a {
     text-decoration: none;
 }
 
-img#logomarca {
-    height: 75px;
+#logomarca {
+    height: 100%;
 }
 
 .menu-principal {
@@ -40,17 +40,18 @@ img#logomarca {
     justify-content: space-between;
 
     padding: 0 10px;
+    height: 80px;
 }
 
 .menu {
     background-color: #D52C23;
-    width: 15%;
+    width: 150px;
 
     border-right: 2px solid black;
 
     position: fixed;
     top: 0;
-    left: -16%;
+    left: -155px;
     bottom: 0;
 
     z-index: 2;
@@ -87,5 +88,19 @@ body.menu-visivel > .menu {
     left: 0;
 }
 body.menu-visivel > #alterna-menu {
-    left: 15%;
+    left: 150px;
+}
+
+@media (max-width: 400px) {
+    #logomarca {
+        width: 100%;
+    }
+    .menu-principal ul {
+        flex-direction: column;
+        height: auto;
+    }
+    #alterna-menu {
+        width: 1.5em;
+        height: auto;
+    }
 }
