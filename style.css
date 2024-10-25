@@ -2,13 +2,30 @@ body {
     margin: 0;
     background-color: #333333;
 }
+header {
+    background-color: black;
+    height: 5em;
+    width: 100%;
+}
 main {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: auto 10%;
     color: #FFFFFF;
 }
 section {
 
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+}
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
 }
 
 ul {
@@ -23,35 +40,54 @@ a {
 #logomarca {
     height: 100%;
 }
+#logomarca-menor {
+    display: none;
+}
 
 .menu-principal {
     border: 2px solid black;
     border-radius: 5px;
 
-    margin: 1em auto auto auto;
+    margin: auto auto;
 
     width: 66%;
 
     background-color: #B8FFD3;
-    color: #96423E;
+
+    position: relative;
+    bottom: 2.5em;
 }
 .menu-principal ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    padding: 0 10px;
+    padding: 0;
+    margin: 0;
     height: 80px;
+}
+.menu-principal ul li {
+    padding: 0 10px;
+    height: 100%;
+    
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.menu-principal ul li:hover {
+    background-color: #AAFAAD;
+}
+.menu-principal ul li a {
+    color: #96423E;
 }
 
 .menu {
     background-color: #D52C23;
-    width: 150px;
+    width: 15%;
 
     border-right: 2px solid black;
 
     position: fixed;
     top: 0;
-    left: -155px;
+    left: -16%;
     bottom: 0;
 
     z-index: 2;
@@ -88,19 +124,92 @@ body.menu-visivel > .menu {
     left: 0;
 }
 body.menu-visivel > #alterna-menu {
-    left: 150px;
+    left: 15%;
 }
 
-@media (max-width: 400px) {
+#jogos {
+    display: flex;
+    flex-wrap: wrap;
+}
+#jogos article {
+    display: inline-block;
+    width: 45%;
+    margin: auto 2% 2em 2%;
+    padding: 0.5%;
+    position: relative;
+    background-color: #5E5E5E;
+    border-radius: 5px;
+
+    transition: all 100ms ease-out;
+}
+#jogos article:hover {
+    width: 49%;
+    margin: auto 0 2em 0;
+}
+#jogos article img {
+    width: 97%;
+    margin: 2px;
+
+    border: 5px inset black;
+}
+#jogos article h2 {
+    margin-top: 2px;
+}
+
+@media (max-width: 1080px) {
+    .menu {
+        width: 30%;
+        left: -31%;
+    }
+    body.menu-visivel > #alterna-menu {
+        left: 30%;
+    }
+    
+    #jogos article img {
+        border-width: 4px;
+    }
+}
+@media (max-width: 850px) {
     #logomarca {
         width: 100%;
     }
+
     .menu-principal ul {
         flex-direction: column;
         height: auto;
     }
+
+    .menu {
+        width: 50%;
+        left: -51%;
+    }
+    body.menu-visivel > #alterna-menu {
+        left: 50%;
+    }
+
+    #jogos article {
+        display: inline-block;
+        width: 100%;
+    }
+    #jogos article img {
+        border-width: 3px;
+    }
+}
+@media (max-width: 400px) {
+    #logomarca {
+        display: none;
+    }
+    #logomarca-menor {
+        width: 100%;
+        display: inline;
+    }
+    
     #alterna-menu {
         width: 1.5em;
         height: auto;
+    }
+
+    #jogos article img {
+        border-width: 2px;
     }
 }
