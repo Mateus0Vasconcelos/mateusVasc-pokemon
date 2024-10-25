@@ -1,32 +1,60 @@
 body {
     margin: 0;
-
     background-color: #333333;
 }
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #FFFFFF;
+}
+section {
 
-.container {
-    position: relative;
-    left: 0;
-    transition: left 100ms ease-out;
 }
 
-.main {
-    color: #DBDBDB;
+ul {
+    list-style-type: none;
 }
 
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+img#logomarca {
+    height: 75px;
+}
 
 .menu-principal {
-    background-color: #DBDBDB;
-    width: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
 
-    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 1em auto auto auto;
+
+    width: 66%;
+
+    background-color: #B8FFD3;
+}
+.menu-principal ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    background-color: #D52C23;
+    width: 250px;
+
+    border-right: 2px solid black;
+
+    position: fixed;
     top: 0;
-    left: -505px;
+    left: -255px;
     bottom: 0;
 
     z-index: 2;
-
-    transition: left 100ms ease-out;
+    
+    transition: all 100ms ease-out;
 }
 
 #alterna-menu {
@@ -35,9 +63,7 @@ body {
 
     position: fixed;
 
-    margin: 10px;
-
-    bottom: 10px;
+    margin: 10px 0 0 10px;
 
     border: 2px solid black;
     border-radius: 10%;
@@ -49,18 +75,16 @@ body {
 
     z-index: 2;
 
-    transition: all 50ms linear;
+    transition: all 100ms linear;
 }
-
 #alterna-menu:active {
     border-width: 1px;
     background-image: linear-gradient(45deg, #DBDBDB, #FFFFFF);
 }
 
-body.menu-visivel > .menu-principal {
+body.menu-visivel > .menu {
     left: 0;
 }
-
 body.menu-visivel > #alterna-menu {
-    left: 510px;
+    left: 250px;
 }
