@@ -28,8 +28,6 @@ img#logomarca {
     border: 2px solid black;
     border-radius: 5px;
 
-    margin-right: auto;
-    margin-left: auto;
     margin: 1em auto auto auto;
 
     width: 66%;
@@ -40,17 +38,19 @@ img#logomarca {
 .menu-principal ul {
     display: flex;
     justify-content: space-between;
+
+    padding: 0 10px;
 }
 
 .menu {
     background-color: #D52C23;
-    width: 250px;
+    width: 15%;
 
     border-right: 2px solid black;
 
     position: fixed;
     top: 0;
-    left: -255px;
+    left: -16%;
     bottom: 0;
 
     z-index: 2;
@@ -87,5 +87,5 @@ body.menu-visivel > .menu {
     left: 0;
 }
 body.menu-visivel > #alterna-menu {
-    left: 250px;
+    left: 15%;
 }
