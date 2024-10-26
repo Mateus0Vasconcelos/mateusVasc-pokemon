@@ -1,6 +1,10 @@
 body {
     margin: 0;
     background-color: #333333;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 header {
     background-color: black;
@@ -20,6 +24,8 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 2.5em;
+
+    text-align: center;
 }
 h2 {
     font-family: "Bebas Neue", sans-serif;
@@ -44,7 +50,7 @@ a {
     display: none;
 }
 
-.menu-principal {
+#menu-principal {
     border: 2px solid black;
     border-radius: 5px;
 
@@ -57,7 +63,7 @@ a {
     position: relative;
     bottom: 2.5em;
 }
-.menu-principal ul {
+#menu-principal ul {
     display: flex;
     justify-content: space-around;
 
@@ -65,39 +71,25 @@ a {
     margin: 0;
     height: 80px;
 }
-.menu-principal ul li {
+#menu-principal ul li {
     padding: 0 10px;
     height: 100%;
     
     margin-bottom: auto;
     margin-top: auto;
 }
-.menu-principal ul li:hover {
+#menu-principal ul li:hover {
     background-color: #AAFAAD;
 }
-.menu-principal ul li a {
+#menu-principal ul li a {
     color: #96423E;
-}
-
-.menu {
-    background-color: #D52C23;
-    width: 15%;
-
-    border-right: 2px solid black;
-
-    position: fixed;
-    top: 0;
-    left: -16%;
-    bottom: 0;
-
-    z-index: 2;
-    
-    transition: all 100ms ease-out;
 }
 
 #alterna-menu {
     width: 2em;
     height: 2em;
+
+    display: none;
 
     position: fixed;
 
@@ -120,16 +112,15 @@ a {
     background-image: linear-gradient(45deg, #DBDBDB, #FFFFFF);
 }
 
-body.menu-visivel > .menu {
-    left: 0;
-}
-body.menu-visivel > #alterna-menu {
-    left: 15%;
+.paragrafo-inicial {
+    margin-bottom: 3em;
 }
 
 #jogos {
     display: flex;
     flex-wrap: wrap;
+
+    align-items: flex-start;
 }
 #jogos article {
     display: inline-block;
@@ -154,17 +145,14 @@ body.menu-visivel > #alterna-menu {
 }
 #jogos article h2 {
     margin-top: 2px;
+    display: inline-block;
+}
+
+dl {
+    margin-bottom: 4em;
 }
 
 @media (max-width: 1080px) {
-    .menu {
-        width: 30%;
-        left: -31%;
-    }
-    body.menu-visivel > #alterna-menu {
-        left: 30%;
-    }
-    
     #jogos article img {
         border-width: 4px;
     }
@@ -174,25 +162,30 @@ body.menu-visivel > #alterna-menu {
         width: 100%;
     }
 
-    .menu-principal ul {
+    #menu-principal ul {
         flex-direction: column;
         height: auto;
     }
 
-    .menu {
-        width: 50%;
-        left: -51%;
-    }
-    body.menu-visivel > #alterna-menu {
-        left: 50%;
-    }
-
     #jogos article {
         display: inline-block;
+        width: 95%;
+    }
+    #jogos article:hover {
         width: 100%;
     }
     #jogos article img {
         border-width: 3px;
+    }
+
+    #alterna-menu {
+        display: block;
+    }
+    #menu-principal ul li:not(:first-child) {
+        display: none;
+    }
+    body.menu-visivel > #menu-principal ul li {
+        display: block;
     }
 }
 @media (max-width: 400px) {
@@ -211,5 +204,9 @@ body.menu-visivel > #alterna-menu {
 
     #jogos article img {
         border-width: 2px;
+    }
+
+    .abrir-texto   {
+        margin: 7px;
     }
 }
