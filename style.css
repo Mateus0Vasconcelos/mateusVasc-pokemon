@@ -113,7 +113,7 @@ a {
 }
 
 .paragrafo-inicial {
-    margin-bottom: 3em;
+    margin-bottom: 3Sem;
 }
 
 #jogos {
@@ -149,7 +149,7 @@ a {
 }
 
 dl {
-    margin-bottom: 4em;
+    margin: 4em auto;
 }
 
 @media (max-width: 1080px) {
