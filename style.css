@@ -3,8 +3,6 @@ body {
     background-color: #333333;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
 }
 header {
     background-color: black;
@@ -14,9 +12,6 @@ header {
 main {
     margin: auto 10%;
     color: #FFFFFF;
-}
-section {
-
 }
 
 h1 {
@@ -119,8 +114,6 @@ a {
 #jogos {
     display: flex;
     flex-wrap: wrap;
-
-    align-items: flex-start;
 }
 #jogos article {
     display: inline-block;
@@ -209,4 +202,8 @@ dl {
     .abrir-texto   {
         margin: 7px;
     }
+}
+
+#info p {
+    text-align: center;
 }
